@@ -1,0 +1,7 @@
+{
+    "name": "TypeORM with JSON Training",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose"
+}
