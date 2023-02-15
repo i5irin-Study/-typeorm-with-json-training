@@ -1,0 +1,26 @@
+{
+  "name": "typeorm-with-json-training",
+  "version": "0.0.0",
+  "description": "Copy the .env.sample as .env and write the environment variables.",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "start": "ts-node ./index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:i5irin-Study/-typeorm-with-json-training.git"
+  },
+  "author": "i5irin",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.1.2",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.12"
+  }
+}
