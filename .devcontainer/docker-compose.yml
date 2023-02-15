@@ -6,6 +6,7 @@ services:
       - ..:/workspace:cached
       - node_modules:/workspace/node_modules
     command: /bin/sh -c "while sleep 1000; do :; done"
+    env_file: ./.env
     ports:
       - 8080:80
   db:
