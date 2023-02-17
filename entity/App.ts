@@ -1,5 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, JoinColumn, ManyToOne } from "typeorm"
 import { Author } from "./Author";
+import { Category } from "./Category";
 
 @Entity()
 export class App {
@@ -22,11 +23,19 @@ export class App {
   @JoinColumn({ name: 'author_id' })
   author?: Author
 
-  constructor(id: number, title: string, body: string, isPublished: boolean, authorId: number) {
+  @Column({ name: 'category_id' })
+  readonly categoryId: number
+
+  @ManyToOne(type => Category, { nullable: false, cascade: ['insert', 'update'], onDelete: 'RESTRICT', onUpdate: 'RESTRICT' })
+  @JoinColumn({ name: 'category_id' })
+  category?: Category
+
+  constructor(id: number, title: string, body: string, isPublished: boolean, authorId: number, categoryId: number) {
     this.id = id;
     this.title = title;
     this.body = body;
     this.isPublished = isPublished;
     this.authorId = authorId;
+    this.categoryId = categoryId;
   }
 }
